@@ -1,8 +1,30 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TeamBuilding from './TeamBuilding';
+import Form from './Form';
 
 function App() {
+
+  const [member, setMember]= useState([{
+    name:' ',
+    email:' ',
+    role:' ',
+  }])
+
+
+
+  const addMembers = members=>{
+    const MemberList={
+      name: members.name,
+      email:members.email,
+      role: members.role,
+      id: Date.now(),
+    }
+    setMember([...member, MemberList])
+  };
+
+  
   return (
     <div className="App">
       <header className="App-header">
