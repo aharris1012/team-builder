@@ -25,12 +25,12 @@ return (
         type="text"
         onChange={handleChanges}/>
 
-        <button type="submit">Click me & Add</button>
+        
         <label htmlFor="name">Teammate's email</label>
         <input
         name="email"
         placeholder="myemail@gmail.com"
-        value="{team.email}"
+        value={team.email}
         type="text"
         onChange={handleChanges}
         />
@@ -42,6 +42,7 @@ return (
         type="text"
         id="role"
         onChange={handleChanges}/>
+        <button type="submit">Click me & Add</button>
 
 
     </form>

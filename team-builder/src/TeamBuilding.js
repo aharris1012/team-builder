@@ -4,12 +4,12 @@ const Team= props =>{
 
     return(
         <div className="teams-people">
-            {props.People.map(people =>{
+            {props.people.map(mem =>{
                 return(
-                    <div className="people" key={people.id}>
-            <h1> Teamates Name:{people.name}</h1>
-                <span>Teamates Email:{people.email}</span>
-            <p>Teamates Role: {people.role}</p>
+                    <div className="people" key={mem.id}>
+            <h1>  Name:{mem.name}</h1>
+                <span> Email:{mem.email}</span>
+            <p>Role: {mem.role}</p>
                     </div>
                 )
             })}
