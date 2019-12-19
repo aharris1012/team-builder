@@ -1,0 +1,55 @@
+import React, {useState} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import TeamBuilding from './TeamBuilding';
+import Form from './Form';
+
+function App() {
+
+  const [member, setMember]= useState([{
+    name:' ',
+    email:' ',
+    role:' ',
+  }])
+
+
+
+  const addMember = members=>{
+    const MemberList={
+      name: members.name,
+      email:members.email,
+      role: members.role,
+      id: Date.now(),
+    }
+    setMember([...member, MemberList])
+  };
+
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
+             <h2>My Team!</h2>
+             <Form form={addMember}/>
+             <TeamBuilding people={member}/>
+
+
+
+        {/* <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a> */}
+      </header>
+    </div>
+  );
+}
+
+export default App;
