@@ -7,9 +7,9 @@ const Team= props =>{
             {props.people.map(mem =>{
                 return(
                     <div className="people" key={mem.id}>
-            <h1>  Name:{mem.name}</h1>
-                <span> Email:{mem.email}</span>
-            <p>Role: {mem.role}</p>
+            <h1> {mem.name}</h1>
+                <span> {mem.email}</span>
+            <p> {mem.role}</p>
                     </div>
                 )
             })}
