@@ -5,11 +5,11 @@ const Form = props =>{
     const [team, setTeam] = useState ({name:' ', email:' ',role: ' '});
 
     const handleChanges = ele =>{
-        setTeam({...team,[el.target.name]: ele.target.value});
+        setTeam({...team,[ele.target.name]: ele.target.value});
     };
 
     const handleSubmit = ele => {
-        el.preventDefault();
+        ele.preventDefault();
         props.form (team);
         setTeam ({name:' ', email: ' ', role: ' '});
     };
@@ -23,7 +23,7 @@ return (
         placeholder="name"
         value={team.name}
         type="text"
-        onChange={hanldeChanges}/>
+        onChange={handleChanges}/>
 
         <button type="submit">Click me & Add</button>
         <label htmlFor="name">Teammate's email</label>
@@ -41,7 +41,7 @@ return (
         value={team.role}
         type="text"
         id="role"
-        onChange={hanldeChanges}/>
+        onChange={handleChanges}/>
 
 
     </form>

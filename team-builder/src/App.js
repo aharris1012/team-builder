@@ -14,7 +14,7 @@ function App() {
 
 
 
-  const addMembers = members=>{
+  const addMember = members=>{
     const MemberList={
       name: members.name,
       email:members.email,
@@ -24,12 +24,19 @@ function App() {
     setMember([...member, MemberList])
   };
 
-  
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+
+             <h2>My Team!</h2>
+             <Form form={addMember}/>
+             <TeamBuilding people={member}/>
+
+
+
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -39,7 +46,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
